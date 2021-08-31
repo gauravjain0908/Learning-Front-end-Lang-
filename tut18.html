@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events </title>
+</head>
+
+<body>
+
+    <!-- Browser events :
+    click
+    contextmenu
+    mouseout
+    mouseover -->
+
+
+    <div id="container">
+        <div id="row">
+
+            <h1> This is all about Event Handler </h1>
+            <p id="para"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum pariatur iure iste eaque quasi
+                repellat. Dicta deleniti sit voluptate corporis impedit optio hic. Suscipit nostrum minus aperiam aut,
+                nulla tenetur, blanditiis perferendis id, autem voluptatibus est hic iusto ex laudantium odio doloribus
+                magni quam? Modi debitis mollitia cumque beatae, aspernatur numquam hic temporibus adipisci quibusdam
+                quam delectus laborum magnam ipsum quod iste vitae perferendis nobis provident harum iure! Maiores
+                itaque eum ipsa? ipsum dolor sit amet consectetur, adipisicing elit. Nihil velit laborum dicta nam
+                labore corporis, vero magnam, facere enim quisquam placeat expedita commodi. Explicabo illum voluptatem
+                suscipit quam ducimus quis provident voluptates exercitationem quaerat.</p>
+        </div>
+
+        <button id="button" onclick="ToggleBtn()">Show / Hide </button>
+    </div>
+
+    <style>
+        #button {
+
+            border-radius: 5px;
+            /* background-color: aqua; */
+            width: 100px;
+            height: 50px;
+            transition: all 1s ease-in-out;
+            animation-duration: 2s;
+            animation-direction: reverse;
+            border: 2px solid red;
+        }
+    </style>
+    <p id='time'> The time is  </p>
+
+    <script>
+
+    let newDate = new Date()
+    let yr = newDate.getFullYear();
+    console.log(yr);
+    function displayTime()
+    {
+        time = new Date();
+        console.log(time);
+        document.getElementById('time').innerHTML=time;
+    }
+
+    setInterval(displayTime ,  1000) 
+
+
+
+
+
+
+        function ToggleBtn() {
+            // let button = document.getElementById("button");
+            // let para = document.getElementById('para');
+
+            if (para.style.display != 'none') {
+
+                para.style.display = 'none';
+            }
+            else {
+                para.style.display = 'block';
+            }
+        }
+    </script>
+
+</body>
+
+</html>
