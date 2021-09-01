@@ -8,6 +8,10 @@
 
 //use gauravKart
 
+
+// To find the database
+db.items.find()
+
 db.items.insertOne({
     // name:"Samsung", price:2000, rating:4.5, qty:233})
     name:"RealMe", price:1000, rating:4.1, qty:24})
@@ -16,6 +20,12 @@ db.items.insertMany([{name:
     "Micromax", price:1000, rating:4.1, qty:23},  
     {name:"Apple", price:100000, rating:5, qty:2325},
     {name:"RealMe", price:1000, rating:4.1, qty:24}])
+
+// Want To ADD Another Data items
+db.anotherCollection.insertOne({a:56})
+
+// Making a New database
+use newDb  // newDb is the name of database that 
 
 
 // How to search data in MongoDB 
@@ -46,5 +56,34 @@ db.items.find({
 
 
  // All documents delete
-
  db.items.deleteMany({price:1000})
+
+//How to update the data single in MongoDB
+db.items.updateOne({name:"Micromax"}, {$set:{price:500}})
+
+//update multiple data
+db.items.updateMany({name:"Micromax"}, {$set:{price:500, rating:1}})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
